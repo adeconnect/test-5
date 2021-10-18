@@ -35,7 +35,6 @@ class DataModel {
             this.data.push(obj);
             return true;
         }
-        this.errors.push("user not saved");
         return false;
     }
 
@@ -49,7 +48,7 @@ class DataModel {
                 temp[requirements] = obj[requirements];
             }
 
-            this.data[index] = temp; 
+            this.data[index] = temp;
             return true;
         }
 
@@ -63,7 +62,7 @@ class DataModel {
             this.data.splice(index, 1);
             return true;
         }
-        return false; 
+        return false;
     }
 
     validate(obj){

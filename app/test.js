@@ -18,6 +18,7 @@ assert(users.save(jones) === true, `saving a user should return true for a valid
 assert(users.errors.length === 0, `error array should be empty after successfully creating a valid user`);
 assert(users.save(james) === false, `saving a user should return false for an invalid user : duplicate email`);
 assert(users.errors.length === 1, `error array should have error when attempting to save user with duplicate email`);
+
 assert(users.save(judas) === false, `saving a user should return false for an invalid user : duplicate matric number`);
 assert(users.save(jerry) === false, `saving a user should return false for an invalid user : password length less than 7`);
 assert(users.save(empty) === false, `saving a user should return false for an invalid user : empty properties`);
@@ -46,6 +47,7 @@ assert(projects.errors.length === 0, `error array should be empty after successf
 assert(projects.save(busa) === false, `saving a project should return false for an invalid project : tags and authors should be of the type array`);
 assert(projects.errors.length === 2, `error array should have errors when attempting to save project with non-array tags or authors`);
 assert(projects.save(winslow) === false, `saving a project should return false for an invalid project : empty properties`);
+console.log(projects.errors);
 assert(projects.errors.length === 3, `error array should have multiple errors when attempting to save a project with empty properties`);
 assert(projects.getAll().length === 2, `projects.getAll() method should return 2`);
 assert(projects.update({ authors: ['tola', 'kunle'], tags: ['ed', 'teach', 'connect'] }, edconnect.id) === true);

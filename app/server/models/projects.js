@@ -7,6 +7,7 @@ class Project {
         this.authors = authors;
         this.tags = tags;
         this.createdBy = createdBy;
+        this.name = name;
     }
 }
 
@@ -25,7 +26,7 @@ class Projects extends DataModel {
                 }
             }
         }
-        
+
         return this.errors.length > 0 ? false: true;
     }
 

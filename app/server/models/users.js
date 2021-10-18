@@ -55,11 +55,11 @@ class Users extends DataModel {
             }
         }
 
-        if (this.getByEmail(obj.email) === this.email){
+        if (this.getByEmail(obj.email)){
             this.errors.push(`A user with specified email address already exists`);
         }
 
-        if (this.getByMatricNumber(obj.matricNumber) === this.matricNumber){
+        if (this.getByMatricNumber(obj.matricNumber)){
             this.errors.push(`A user with specified matric number already exists`);
         }
 
