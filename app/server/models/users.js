@@ -25,7 +25,7 @@ class Users extends DataModel {
                 return true;
             }
         }
-        return null;
+        return false;
     }
 
     getByEmail(email) {// loop through this data model
